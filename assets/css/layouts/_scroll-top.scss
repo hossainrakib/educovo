@@ -1,0 +1,35 @@
+.scroll-top-area{
+
+    #scroll{
+        @extend .transition;
+
+        a{
+            @include area(40, 40);
+            background-color: $button-bg;
+            border-radius: 50%;
+            @extend .transition;
+
+            @include respond-below(sm){
+                @include area(30, 30);
+
+            }
+            &:hover{
+                background-color: $button-hover-bg;
+            }
+            i{
+                font-size: 24px;
+                color: $white-color;
+                
+                @include respond-below(sm){
+                    font-size: 20px;
+
+                }
+            }
+        }
+    }
+    .scroll-top{
+        position: fixed;
+        right: 20px;
+        bottom: 40px;
+    }
+}

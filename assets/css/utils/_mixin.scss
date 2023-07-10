@@ -1,0 +1,55 @@
+/*font-family*/
+@mixin font($font-family, $font-size, $font-weight) {
+    font-family: $font-family;
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+}
+/*font-family*/
+@mixin typrography($font-size, $font-weight, $line-height) {
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+    line-height: $line-height + px;
+
+}
+/* text-size*/
+@mixin text($text-color, $text-transfrom, $line-height) {
+    color: $text-color;
+    text-transform: $text-transfrom;
+    line-height: $line-height;
+}
+/*font-text-all*/
+@mixin fonts ($font-size, $font-weight, $text-color, $text-transfrom, $line-height) {
+    font-size: $font-size + px;
+    font-weight: $font-weight;
+    color: $text-color;
+    text-transform: $text-transfrom;
+    line-height: $line-height;
+}
+
+/* font-line-height-size*/
+@mixin texts($font-size, $line-height) {
+    font-size: $font-size + px;
+    line-height: $line-height + px;
+}
+/*before after*/
+@mixin after($border-color, $height, $width, $top, $bottom , $left, $right) {
+    height: $height;
+    width: $width;
+    left: $left;
+    right: $right;
+    top: $top;
+    background-color: $border-color;
+    bottom: $bottom;
+    content: '';
+    position: absolute;
+}
+
+/*width height it mixin name is area */
+@mixin area($width, $height) {
+    width: $width + px;
+    height: $height + px;
+}
+/**/
+/**/
+/**/
+/**/

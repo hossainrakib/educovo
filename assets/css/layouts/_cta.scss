@@ -1,0 +1,113 @@
+.cta-area{
+    .cta{
+        &__wrapper{
+            &::after, &::before{
+                position: absolute;
+                content: '';
+                top: 0;
+                width: 50%;
+                height: 100%;
+                z-index: -1;
+
+                @include respond-below(md) {
+                    height: 50%;
+                    width: 100%;
+                    top: inherit;
+                }
+                
+            }
+            &::after{
+             background-image: url(../../img/cta/left-bg.jpg);
+             left: 0;
+             @include respond-below(md) {
+              top: 0;
+              max-height: 300px;
+            }
+            }
+            &::before{
+                background-image: url(../../img/cta/right-bg.jpg);
+                right: 0;
+                @include respond-below(md) {
+                  bottom: 0;
+                }
+            }
+        }
+
+        &__content{
+            padding: 135px 0 150px 60px;
+
+            @include respond-below(md) {
+                padding: 45px 0 50px;
+            }
+        }
+        &__title{
+            h2{
+                margin: 0;
+
+                @include respond-below(xs) {
+                    @include texts(23, 28)
+                }
+                
+            }
+        }
+        &__disc{
+            p{
+                color: $para-color;
+                margin: 16px 0 40px;
+            }
+        }
+        &__link{
+            a{
+                padding: 12px 40px;
+            }
+        }
+  
+    }
+    .video{
+        &__wrap{
+            @include respond-below(md) {
+                height: auto !important;
+              }
+        }
+        &__content{
+            max-width: 275px;
+            padding-bottom: 50px;
+
+  
+            @include respond-below(md) {
+              padding: 100px 0;
+            }
+            &:hover{
+                opacity: .7;
+            }
+        }
+        &__icon{
+            a{  
+                margin-right: 20px;
+                @include area(70, 70);
+                border-radius: 50%;
+                border: 5px solid $white-color;
+
+                @include respond-below(xs) {
+                    @include area(60, 60);
+  
+                }
+                
+                i{
+                    font-size: 25px;
+                    color: $white-color;
+                }
+            }
+        }
+        &__title{
+            h3{
+                color: $white-color;
+                @include respond-below(xs) {
+                    @include texts(20, 25)
+  
+                }
+                
+            }
+        }
+    }
+}

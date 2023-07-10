@@ -1,0 +1,622 @@
+.header-area{
+    .header__top{
+        background-color: $main-bg;
+        .topbar{
+            &__content{
+
+            }
+            &__wrap{
+
+            }
+            &__item{
+                margin-right: 40px;
+                i{
+                    margin-right: 2px;
+                    &::before{
+                        bottom: -2.5px;
+                        position: relative;
+                    }
+                }
+                a, i{
+                    color: $white-color;
+                    line-height: 50px;
+                    text-transform: lowercase;
+                }
+                a{
+                    @extend .transition;
+                    &:hover{
+                        color: $button-hover-bg;
+                    }
+                }
+            }
+            &__right{
+                .login-register{
+                    
+                    i{
+                        color: $button-hover-bg;
+                        margin-right: 10px;
+                    }
+                    span{
+
+                    }
+                    a, span{
+                        color: $white-color;
+                    }
+                    a{
+                        @extend .transition;
+                        &:hover{
+                            color: $button-hover-bg;
+                        }
+                        &:last-child{
+                            margin-right: 30px;
+                        }
+                    }
+                }
+                .btn-part{
+                    a.btn-apply{
+                        color: $white-bg;
+                        padding: 12px 35px;
+                        background-color: $button-bg;
+                        @extend .transition;
+
+                        &:hover{
+                            background-color: $button-hover-bg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-header{
+        background-color: $white-bg;
+        @extend .transition;
+
+        .logo-cat-wrap{
+            .logo{
+                &__light{
+                    
+                    display: none;
+                }
+                img{
+                    max-height: 40px;
+
+                    @include respond-between(md, lg) {
+                        max-height: 34px;
+
+                    }
+                    @include respond-between(sm, md) {
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                      
+                    }
+                    @include respond-below(md) {
+                        max-height: 25px;
+                      
+                    }
+                }
+                &__dark{
+                    img{
+
+                    }
+                }
+                &__light{
+                    img{
+
+                    }
+                }
+            }
+            .categories-btn{
+                margin-right: 60px;
+
+                @include respond-between(md, lg) {
+                    margin-right: 0;
+                }
+                @include respond-between(sm, md) {
+                  
+                }
+                @include respond-between(xs, sm) {
+                  
+                }
+                @include respond-below(xs) {
+                  
+                }
+                button.btn-cat{
+                        color: $nav-color;
+                    i{
+                        @extend .transition;
+                        &.effect{
+                            color: $main-color;
+                        }
+                    }
+                    span{
+                        text-transform: uppercase;
+                        margin-left: 10px;
+                        line-height: 120px;
+                    }
+                }
+            }
+            .cat-btn-inner{
+                padding: 15px 30px;
+                background-color: $button-bg;
+                width: 200px;
+                ul.cat-menu{
+                    li.item{
+                        a{
+                            line-height: 45px;
+                            color: $white-color;
+                            @extend .transition;
+
+                            &:hover{
+                                color: $cat-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menu-wrap{
+            .main-menu > {
+                ul{
+                    li.item{
+                        margin-right: 23px;
+                        position: relative;
+
+                        @include respond-between(md, lg) {
+                            margin-right: 18px;
+                        }
+                        @include respond-between(sm, md) {
+                          
+                        }
+                        @include respond-between(xs, sm) {
+                          
+                        }
+                        @include respond-below(xs) {
+                          
+                        }
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        a.link{
+                            line-height: 120px;
+                            color: $nav-color;
+                            font-weight: 500;
+                            padding-right: 12px;
+                            text-transform: uppercase;
+                            position: relative;
+                            @extend .transition;
+
+                            @include respond-between(md, lg) {
+                                font-size: 14px;
+                            }
+                            @include respond-between(sm, md) {
+                              
+                            }
+                            @include respond-between(xs, sm) {
+                              
+                            }
+                            @include respond-below(xs) {
+                              
+                            }
+                            &::before{
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                content: '+';
+                                right: 0;
+
+                            }
+
+                            &:hover{
+                                color: $main-color;
+                                &::before{
+                                    content: '+';
+                                    visibility: hidden;
+                                    opacity: 0;
+                                }
+                                &::after{
+                                    position: absolute;
+                                    content: '-';
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 0;
+                                }
+                              
+                            }
+                            &.active{
+                                color: $main-color;
+                            }
+                        }
+                        ul.sub-menu{
+                            padding: 15px 0;
+                            background-color: $button-bg;
+                            min-width: 248px;
+                            left: 0;
+                            transform: scaleY(0);
+                            transform-origin: top;
+                            z-index: 999;
+                            @extend .transition;
+
+                            li.item{
+                                a.links{
+                                    color: $white-color;
+                                    padding: 10px 30px;
+                                    @extend .transition;
+                                    &:hover{
+                                        color: $sub-menu-color;
+                                    }
+                                }
+                            }
+                        }
+
+                        ul.mega-menu {
+                            right: -90px !important;
+                            transform: scaleY(0);
+                            transform-origin: top;
+                            z-index: 999;
+                            @extend .transition;
+                
+                            @include respond-below(xl) {
+                              right: 0 !important;
+
+                            }
+
+                            ul.sub-menu{
+                                padding: 30px;
+                                min-width: 256px;
+                                li.item{
+                                    margin-right: 0;
+                                    a.link{
+                                        &.active{
+                                            color: $sub-menu-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            .sub-menu, .mega-menu{
+                                transform: scaleY(1);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .expand-btn-inner{
+                ul{
+                    li{
+                        padding-right: 20px;
+                        &:last-child{
+                            padding-right: 0;
+                            line-height: 20px;
+                        }
+                        a{
+                            @extend .transition;
+                            
+                            i{
+                                color: $nav-color;
+                            }
+                        }
+                        
+                        &.shoping-card{
+                            padding-left: 15px;
+                        }
+                        &.shoping-card >{
+                            a{
+                                position: relative;
+                                line-height: 120px;
+
+                                &::after{
+                                    position: absolute;
+                                    content: '';
+                                    width: 1px;
+                                    height: 20px;
+                                    background-color: $border-bg;
+                                    left: -16px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                i{
+                                    &.effect{
+                                        color: $main-color;
+
+                                    }
+                                }
+                                &:hover{
+                                    i{
+                                        color: $main-color;
+                                    }
+                                }
+                            }
+                        }
+                        a.nav-expander{
+                            span{
+                                width: 30px;
+                                height: 2px;
+                                background-color: $nav-expander-bg;
+                                display: block;
+                                @extend .transition;
+                                &:nth-child(2){
+                                    margin: 6px 0;
+                                }
+
+                            }
+                            &:hover{
+                                cursor: pointer;
+
+                                & span{
+                                    background-color: $main-color;
+                                }
+                            }
+                        }
+                        .woocommarce-mini-card{
+                            position: relative;
+                            z-index: 9999;
+                            min-width: 265px;
+                            background-color: $button-bg;
+                            padding: 30px 35px;
+                            visibility: hidden;
+                            opacity: 0;
+                            top: 300%;
+                            @extend .transition;
+                            li{
+                                padding-right: 0;
+                            }
+                            .mini-card{
+                                margin-bottom: 20px;
+                                padding-bottom: 20px;
+                                
+                                &__wrap{
+                                    li.total-price{
+                                        margin-bottom: 20px;
+                                    }
+                                }
+                                &__icon{
+                                    a{
+                                        line-height: 18px;
+                                        @include area(18, 18);
+                                        border: 1px solid $white-color;
+                                        border-radius: 50%;
+                                        i{
+                                            font-size: 12px;
+                                            line-height: 16px;
+                                            color: $white-color;
+                                            @extend .transition;
+
+                                        }
+                                        &:hover{
+                                            i{
+                                                color: $cat-color;
+                                            }
+                                        }
+                                    }
+                                }
+                                &__info{
+                                    .card-title{
+                                        margin-bottom: 0 !important;
+                                        a{
+                                            color: $white-color;
+                                            @extend .transition;
+
+                                            &:hover{
+                                                color: $cat-color;
+                                            }
+                                        }
+                                    }
+                                    .single-price{
+                                        span{
+                                            font-size: 15px;
+                                            color: $white-color;
+                                        }
+                                    }
+                                }
+                                &__product{
+                                    a{
+                                        img{
+                                            height: 56px;
+                                        }
+                                    }
+                                }
+                            }
+                            .total-price{
+                                a{
+                                    font-size: 15px;
+                                    color: $white-color;
+
+                                }
+                            }
+                            .card-btn-inner{
+                                a.card-btn{
+                                    color: $white-color;
+                                    padding: 5px 10px;
+                                    background-color: $cat-color;
+                                }
+                            }
+                        }
+                        &:hover{
+                            .woocommarce-mini-card{
+                                visibility: visible;
+                                opacity: 1;
+                                top: 100%;
+                            }
+                        }
+                        .menu-toggle{
+                            position: relative;
+                            z-index: 9999;
+                            width: 500px;
+                            background-color: $white-bg;
+                            padding: 30px 50px;
+                            right: -500px;
+                            overflow: auto;
+                            height: 100%;
+                            @extend .transition;
+                            &.action{
+                                right: 0px;
+                            }
+                            .close-btn-inner{
+                                span.close-btn{
+                                    @include area(40,40);
+                                    background-color: $button-bg;
+                                    border-radius: 50%;
+                                    display: block;
+                                    @extend .transition;
+                                    &:after, &:before{
+                                        position: absolute;
+                                        content: '';
+                                        width: 1px;
+                                        height: 20px;
+                                        background-color: $white-bg;
+                                        top: 50%;
+                                        left: 50%;
+                                    }
+                                    &::after{
+                                        transform: translate(-50%, -50%) rotate(45deg);
+                                    }
+                                    &::before{
+                                        transform: translate(-50%, -50%) rotate(-45deg);
+                                    }
+                                    &:hover{
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                            }
+                            .canvas{
+                                &__logo{
+                                    margin: 50px 0 30px;
+                                    height: 35px;
+
+                                    img{
+                                        width: auto;
+
+                                    }
+                                }
+                                &__disc{
+                                    margin: 0 8px;
+                                    p{
+                                        color: $para-color;
+                                        text-transform: inherit;
+                                        margin-bottom: 25px;
+                                    }
+                                }
+                                &__gallery{
+                                    margin: -5px;
+                                    &__image{
+                                        margin: 5px;
+                                        flex-basis: 121px;
+                                        overflow: hidden;
+                                        img{
+                                            @extend .transition; 
+                                        }
+                                        &:hover{
+                                            img{
+                                                transform: scale(1.1);
+
+                                            }
+                                        }
+                                    }
+                                }
+                                &__map{
+                                    margin: 40px 0 50px;
+                                   img{
+
+                                   } 
+                                }
+                                &__contact{
+                                    ul.social{
+                                        li{
+                                            a{
+                                                i{
+
+                                                    @include texts(18, 18);
+                                                    color: $cat-color;
+                                                    @extend .transition;
+                                                }
+                                                &:hover{
+                                                    i{
+                                                        color: $main-color !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.stacky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+            z-index: 99999;
+            background-color: $main-bg;
+
+            @include respond-below(xs){
+                position: inherit;
+            }
+            .logo{
+                &__dark{
+                    display: none;
+                }
+                &__light{
+                    display: block !important;
+                }
+            }
+
+            .logo-cat-wrap{
+                .categories-btn{  
+                    button.btn-cat{
+                        color: $white-color;
+                        span{
+                            line-height: 90px;
+                        }
+                    }
+                }
+            }
+            .menu-wrap{
+                .main-menu > {
+                    ul {
+                        li.item{
+                            a.link{
+                                color: $white-color;
+                                line-height: 90px;
+                                &:hover{
+                                    color: $main-color;
+                                  
+                                }
+                                &.active{
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .expand-btn-inner >{
+                    ul >{
+                        li >{
+             
+                            a{
+                                line-height: 90px;
+                                i{
+                                    color: $white-color;
+                                }
+                            }
+                 
+                            a.nav-expander{
+                                span{
+                                    background-color: $white-bg;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

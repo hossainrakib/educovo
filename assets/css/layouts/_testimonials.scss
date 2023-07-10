@@ -1,0 +1,138 @@
+.testimonials-area{
+    .donation{
+        &__wrap{
+            padding-right: 90px;
+            @include respond-below(md) {
+                padding-right: 0;
+            }
+        }   
+        &__image{
+            border-radius: 5px;
+            margin-bottom: 20px; 
+            img{
+           
+            }
+    
+        }
+        &__title{
+            h3{
+                @include texts(26, 31);
+                color: $teamplate-color;
+            }
+        }
+        &__disc{
+            p{
+                color: $para-color;
+                margin: 10px 0 40px;
+            }
+        }
+        &__link{
+            a{
+                padding: 14px 30px;
+            }
+        }
+
+    }
+    .testimonials{
+        &__wrap{
+            @include respond-below(md) {
+                margin-top: 30px;        
+            }
+        }
+        &__item{
+            background-color: $second-bg;
+            padding: 30px;
+            margin-bottom: 50px;
+            border-radius: 5px;
+            @include respond-below(xs) {
+                padding: 30px 20px;
+  
+            }
+        }
+        &__profile{
+            flex-basis: 32%;
+            @include respond-below(xs) {
+                flex-basis: auto;
+  
+            }
+            img{
+            
+                @include respond-below(xs) {
+                    max-width: 210px;
+      
+                }
+            }
+        }
+        &__content{
+            padding-left: 60px;
+            flex-basis: 68%;
+            @include respond-below(xs) {
+                 flex-basis: auto;
+                padding-left: 15px;
+            }
+            .author{
+                &__disc{
+                    margin: 12px 0 20px;
+
+                    p{
+                        @include fonts(22, 600, $teamplate-color, none, 30px);
+                        font-family: $second-font;
+                        display: inline;
+                        position: relative;
+
+                        @include respond-between(md, lg) {
+                            @include texts(15, 25)
+                        }
+                        @include respond-below(md) {
+                            @include texts(17, 25)
+                          
+                        }
+                        
+                        
+                        &::after, &::before{
+                            position: absolute;
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 20px;
+                            transform: rotate(180deg);
+                            @include respond-below(xs) {
+                                font-size: 10px;
+                            }
+                        }
+                        &::after{
+                            content: '\f10d';
+                            right: -30px ;
+                            bottom: -8px;
+
+                            @include respond-below(xs) {
+                                right: -18px ;
+  
+                            }
+                        }
+                        &::before{
+                            content: '\f10e';
+                            left: -30px ;
+                            top: -8px;
+                            @include respond-below(xs) {
+                                left: -18px ;
+  
+                            }
+                        }
+                    }
+                }
+                &__name{
+                    h5{
+                        @include fonts(18, 600, $teamplate-color, inherit, 22px);
+
+                    }
+                }
+                &__dosignation{
+                    span{
+                        color: $para-color;
+                    }
+                }
+           
+            }
+        }
+    
+    }
+}

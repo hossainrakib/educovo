@@ -1,0 +1,96 @@
+.newsletter-area{
+    margin-bottom: -122px;
+
+    @include respond-between(md, lg) {
+        margin-bottom: -115px;
+  
+    }
+    @include respond-between(sm, md) {
+        margin-bottom: -95px;
+      
+    }
+    @include respond-below(sm) {
+      margin-bottom: 0;
+      padding-bottom: 70px;
+    }
+    @include respond-below(xs) {
+    }
+    .newsletter__{
+        &wrap{
+            padding: 60px 70px;
+            position: relative;
+            z-index: 11;
+
+            @include respond-below(md) {
+                padding: 40px 30px;
+              
+            }
+            @include respond-below(xs) {
+                padding: 30px 15px;
+              
+            }
+            
+        }
+        &content{
+                h5{
+                    margin-bottom: 8px;
+                }
+                h2{
+
+                }
+        }
+        &form{
+
+            @include respond-below(sm) {
+              margin-top: 30px;
+            }
+            
+            &__wrap{
+
+            }
+
+        }
+        &email{
+
+            input{
+                padding: 17px 30px;
+                border: none;
+
+           
+                @include respond-below(xs) {
+                    padding: 10px 20px;
+                }
+                
+                &::placeholder{
+                    @include fonts(15, 400, $para-color, capitalize, 26px);
+                    font-family: $main-font;  
+
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        &sumit{
+            input{
+                color: $white-color;
+                padding: 0 40px;
+                background-color: $main-bg;
+                border: none;
+                @extend .transition;
+
+                @include respond-below(xs) {
+                    padding: 0px 20px;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+                &:hover{
+                    background-color: $submit-hover-bg;
+                }
+            }
+        }
+    }
+}

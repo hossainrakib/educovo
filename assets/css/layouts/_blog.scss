@@ -1,0 +1,143 @@
+.blog-area, .area-adjust{
+    background-color: $second-bg;
+    .blog{
+        &-active{
+            .slick-list{
+                margin: 0 -15px;
+
+                @include respond-below(xs){
+                    margin: 0;
+                }
+            }
+        }
+        &__wrap{
+            margin-top: 20px;
+        }
+        &__item{
+            margin: 0 15px;
+            &:hover{
+                .blog__image{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+        &__image{
+            overflow: hidden;
+            img{
+                @extend .transition;
+
+            }
+        }
+        &__content{
+            padding: 20px 30px;
+            background :$white-bg;
+
+            @include respond-below(xs){
+                padding: 17px 15px;
+            }
+        }
+        &__meta{
+            &__wrap{
+
+            }
+        }
+        &__user{
+            margin-right: 20px;
+
+            color: $para-color;
+            .user__{
+                &icon{
+                    padding-right: 5px;
+                    i{
+    
+                    }
+                }
+                &title{
+                    h6{
+
+                    }
+                }
+            }
+            
+        }
+        &__title{
+            h3{
+                line-height: 34px;
+                color: $teamplate-color;
+                margin: 10px 0 15px;
+                @extend .transition;
+
+                @include respond-between(md, lg) {
+                    font-size: 19px;
+                }
+                @include respond-between(xs, md) {
+                    font-size: 20px;
+                  
+                }
+                @include respond-below(xs) {
+                  @include texts(18, 26)
+                }
+                
+                &:hover{
+                    color: $main-color;
+                }
+
+            }
+        }
+        &__disc{
+            p{
+                color: $para-color;
+            }
+        }
+        &__comment__part{
+            padding: 20px 0 10px;
+            margin-top: 20px;
+            border-top: 1px solid $border-two-bg;
+          
+            .commment__part{
+                a{
+                    color: $para-color;
+                    @extend .transition;
+                    
+  
+
+                    &:hover{
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+        &__link{
+            position: relative;
+            a{
+                color: $teamplate-color;
+                font-weight: 500;
+                text-transform: uppercase;
+                padding-right: 20px;      
+                @extend .transition;
+
+                &:hover{
+                    color: $main-color;
+                
+                }
+ 
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                right: 9px;
+                transform: translateY(-50%);
+                font-size: 20px;
+                @extend .transition;
+            }
+            &:hover{
+                i{
+                    right: 0;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

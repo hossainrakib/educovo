@@ -1,0 +1,130 @@
+.hero-area{
+
+    .hero{
+        &__single{
+            min-height: 787px;
+            
+            @include respond-between(md, lg) {
+  
+            }
+            @include respond-between(sm, md) {
+                min-height: 641px;
+              
+            }
+            @include respond-between(xs, sm) {
+              
+            }
+            @include respond-below(sm) {
+                min-height: 552px;
+              
+            }
+            
+        }
+        &__content{
+
+        }
+        &__title{
+            h1{
+                    font-family: $second-font;
+                    color: $white-color;
+                    margin: 25px -4px 40px;
+
+                    @include respond-between(md, lg) {
+                        @include texts(75, 85);
+                        margin: 15px -4px 40px;
+
+                    }
+                    @include respond-between(sm, md) {
+                        @include texts(70, 84);
+                        margin: 10px -4px 30px;
+
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(50, 60);
+                        margin: 10px -4px 25px;
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(40, 48);
+                        margin: 10px -4px 20px;
+                      
+                    }
+                    
+            }
+            &__sub{
+                h2{
+                    @include fonts(48, 400, $white-color, capitalize, 58px);
+                    font-family: $second-font;
+
+                    @include respond-between(md, lg) {
+                        @include texts(40, 50);
+  
+                    }
+                    @include respond-between(sm, md) {
+                        @include texts(35, 42);
+                      
+                    }
+                    @include respond-between(xs, sm) {
+                        @include texts(30, 36);
+                      
+                    }
+                    @include respond-below(xs) {
+                        @include texts(25, 30);
+                      
+                    }
+                    
+                }
+            }
+        }
+        &__link{
+            a{
+                padding: 16px 40px;
+                @include respond-below(xs) {
+                    padding: 12px 30px;
+
+                  
+                }
+            }
+        }
+
+        &.slick-slider{
+            position: relative;
+            .slick-arrow{
+                padding: 0;
+                margin: 0;
+                @include area(40, 40);
+                border-radius: 50%;
+                background-color: $button-bg;
+                border: none;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                z-index: 99;
+                visibility: hidden;
+                opacity: 0;
+                @extend .transition;
+                i{
+                    font-size: 15px;
+                    color: $white-color;
+                }
+                &.slick-prev{
+                    left: 10px;
+                }
+            }
+            &:hover{
+                .slick-arrow{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .slick-next{
+                    right:45px;
+                }
+                .slick-prev{
+                    left: 45px;
+                }
+            }
+        }
+    }
+}

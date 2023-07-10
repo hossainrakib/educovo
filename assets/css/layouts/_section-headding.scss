@@ -1,0 +1,52 @@
+.section{
+  &__title{
+    h2{
+      color: $teamplate-color;
+      margin: 10px 0 40px;
+      @include respond-below(lg) {
+        @include texts(30, 36)
+      }
+      @include respond-below(md) {
+        margin-bottom: 20px;
+      }
+      
+      @include respond-below(xs) {
+        @include texts(25, 30)
+        
+      }
+      
+    }
+    &__sub{
+      h5{
+        color: $main-color;
+        text-transform: uppercase;
+        font-family: $main-font;
+      }
+    }
+  }
+
+}
+
+//container width 
+.container{
+    width: 100%;
+    @include respond-above(xl) {
+      max-width: 1270px !important;
+    }
+    @include respond-between(lg, xl) {
+      max-width: 1140px !important;
+      
+    }
+    @include respond-between(md, lg) {
+      max-width: 960px !important;
+      
+    }
+    @include respond-between(sm, md) {
+      max-width: 720px !important;
+      
+    }
+    @include respond-between(xs, sm) {
+      max-width: 540px !important;
+      
+    }
+}

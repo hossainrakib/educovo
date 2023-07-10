@@ -1,0 +1,20 @@
+.partner-area{
+    background-color: $second-bg;
+    .partner{
+        &__wrap{
+
+        }
+
+        &__item{
+        }
+        &__brand{
+            text-align: center;
+            a{
+                
+                img{
+                    max-width: 163px;
+                }
+            }
+        }
+    }
+}      

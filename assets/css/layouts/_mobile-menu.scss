@@ -1,0 +1,179 @@
+.slicknav_menu {
+    display:none;
+
+    @include respond-below(md) {
+        display:block;
+        
+    }
+    &.stacky{
+        @extend .transition;
+
+        .slicknav{
+            
+            &_btn{
+                height: 65px;
+            }
+            &_icon-bar{
+                background-color: $white-bg !important;
+            }
+            &_nav{
+                top: 65px !important;
+            }
+        }
+    }
+}
+.mobile-icon{
+    .slicknav{
+        &_menu{
+            padding: 0;
+            background-color: transparent;
+            
+        }
+        &_btn{
+            padding: 0;
+            background-color: transparent;
+            margin: 0;
+            line-height: 20px;
+            height: 90px;
+            position: relative;
+
+            &.slicknav_open{
+                .slicknav_icon{
+                    &-bar{
+                        margin: 0;
+                        position: absolute;
+                        top: 50%;
+                        &:nth-child(1){
+                            transform: translateY(-50%) rotate(45deg) !important;
+                        }
+                        &:nth-child(2){
+                            display: none;
+                        }
+                        &:nth-child(3){
+                            transform: rotate(-45deg) !important;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        &_icon{
+            position:absolute;
+            top: 50%;
+            right: 20px;
+            height: 25px;
+            transform: translate(0%, -50%);
+            &::before{
+                height: 25px;
+            }
+            &-bar{
+                width: 18px;
+                height: 2px;
+                margin: 5px 0;
+                background-color: $mobile-nav-bg;
+            }
+        }
+        &_nav{
+            position: absolute;
+            width: calc(100% - 24px);
+            left: 12px;
+            top: 90px;
+            z-index: 999;
+        }
+        &_parent{
+            border-bottom: 1px solid $mobile-border-bg;
+            &:last-child{
+                border-bottom: 0px solid;
+            }
+            .slicknav_item{
+                padding: 0;
+                margin: 0;
+                background-color: $white-bg;
+                position: relative;
+                a.link{
+                    font-size: 14px;
+                    line-height: 70px;
+                    font-weight: 500;
+                    color: $cat-color;
+                    text-transform: uppercase;
+                    padding-left: 20px;
+                    @extend .transition;
+                    
+                    @include respond-below(xs){
+                        line-height: 50px;
+                    }
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+                &:hover{
+                    background-color: $white-bg;
+                    border-radius: 0;
+                    a{
+                        color: $main-color;
+                    }
+                }
+                .slicknav_arrow{
+                    button{
+                        border: none;
+                        padding: 0;
+                        margin: 0;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 40px;
+                        background-color: $mobile-arrow-bg;
+                        i{
+                            font: 16px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+            .mega-menu{
+                position: static !important;
+                margin-left: 0;
+                .sub-menu{
+                    .item{
+                        .links{
+                            &.active{
+                                color: $sub-menu-color;
+                            }
+                        }
+        
+                    }
+                }
+            }
+            .sub-menu{
+                position: static !important;
+                margin-left: 0;
+                padding-top: 15px;
+                background-color: $button-bg;
+                .item{
+                    .links{
+                        font-size: 14px;
+                        padding: 10px 30px;
+                        color: $cat-color;
+                        @extend .transition;
+                        @include respond-below(xs){
+                            padding: 4px 30px;
+
+                        }
+                        & .active{
+                            color: $sub-menu-color;
+                        }
+                        &:hover{
+                            background-color: transparent;
+                            border-radius: 0;
+                            color: $white-color;
+                        }
+                    }
+    
+                }
+            }
+        }
+
+
+    }
+}

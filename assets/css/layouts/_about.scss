@@ -1,0 +1,112 @@
+.about-area{
+    .about{
+        &__intro{
+            background-color: $main-bg;
+            padding: 88px 50px 95px;
+            border-radius: 4px;
+            margin-right: 40px;
+            @include respond-below(md){
+                margin-right: 0px;
+        
+            }
+            @include respond-between(md, lg) {
+                padding: 60px 25px 70px;
+  
+            }
+            @include respond-between(xs, md) {
+                padding: 45px 35px 50px;
+              
+            }
+
+            @include respond-below(xs) {
+                padding: 45px 15px 50px;
+              
+            }
+            
+        }
+        &__title{
+            h2{
+
+            }
+            &__sub{
+                h5{
+
+                }
+            }
+        }
+        &__disc{
+            p{
+                @include texts(18, 30);
+                margin-bottom: 40px;
+            }
+        }
+        &__link{
+            a.btn-more{
+                padding: 12px 40px;
+            }
+        }
+    }
+}
+.counter-area{
+    @include respond-below(md){
+        margin-top: 40px;
+
+    }
+    .counter{
+        &__item{
+            padding: 35px 0;
+
+        }
+        &__number{
+            a{
+                font-family: $second-font;
+                @include fonts(42, 700, $teamplate-color, uppercase, 42px);
+                position: relative;
+                &::after{
+                    position: absolute;
+                    text-transform: lowercase;
+                }
+                &.student{
+                    padding-right: 30px;
+                    &::after{
+                        content: 'k+';
+                        right: -20px;
+
+                    }
+                }
+                &.graduates{
+                    padding-right: 30px;
+                    &::after{
+                        content: '%';
+                        right: -11px;
+                    }
+                }
+            }
+        }
+        &__title{
+            h4{
+                color: $nav-color;
+                margin-top: 7px;
+     
+                @include respond-below(lg) {
+                    @include texts(20, 24)
+                  
+                }
+                
+            }
+        }
+    }
+}
+.grid-area{
+    margin-top: 40px;
+    .grid{
+        &__item{
+
+        }
+        &__image{
+            img{
+
+            }
+        }
+    }
+}

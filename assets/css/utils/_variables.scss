@@ -1,0 +1,313 @@
+//text-color
+$teamplate-color:#112958;
+$main-color:#21a7d0;
+$white-color:#fff;
+
+// munu link color
+$nav-color:#394459;
+
+// paragrap color
+$para-color:#505050;
+
+//menu categories
+$cat-color:#273c66;
+
+//sub-menu links hover color
+$sub-menu-color:#dddddd;
+$t-color:#fff;
+
+//backgroutd-color
+
+//button hover/theme mani color
+$button-bg:#21a7d0;
+$button-hover-bg:#2db4de;
+
+// theme bg
+$main-bg:#273c66;
+$white-bg:#fff;
+$second-bg:#f3f8f9;
+
+//menu down border
+$border-two-bg:#dcdfe6;
+$border-bg:#7d8aa3;
+//expander icon color
+$nav-expander-bg:#111;
+//mobile menu 
+$mobile-nav-bg:#333;
+$mobile-border-bg:#131313;
+$mobile-arrow-bg:#ddd;
+//categories
+$cat-hover-color:#ccc;
+$cat-overlay-bg:#273c66;
+//newsletter
+$submit-hover-bg:#2e4778;
+//copy-right
+$copy-color:#f3f8f9;
+$s-bg:#2e4778;
+
+//service overlay bg
+
+$services:(1,#273c66), (2,#21a7d0), (3,#772bea) ,(4,#2db4de);
+
+@each $classname, $color in $services {
+    .overlay#{$classname}{
+        &::after{
+            background-color: $color;
+        }
+    }
+}
+//counter-div bg
+
+$counter:('one',#fbf8cc), ('two',#e9fbd5), ('three',#dcf1fd);
+
+@each $classname, $color in $counter {
+    .counter-#{$classname}-bg{
+        background-color: $color;
+    }
+}
+
+//event-div bg
+
+$event:('one',#dcf1fd), ('two',#e9fbd5), ('three',#fee2c0);
+
+@each $classname, $color in $event {
+    .event-#{$classname}-bg{
+        background-color: $color;
+    }
+}
+//div gap
+.gap{
+    margin:15px;
+    &ed{
+        padding: 15px;
+    }
+    &s{
+        @include respond-below(sm){
+            margin: 0;
+        }
+    }
+    &__gutter{
+        margin:-15px;
+        @include respond-below(xs){
+            margin: -12px;
+        }
+        &s{
+            @include respond-below(sm){
+                margin: 0;
+            }
+        }
+    }
+}
+//section-padding
+
+.section-padding{
+    padding: 100px 0 94px;
+
+    @include respond-between(md, lg) {
+         
+    }
+    @include respond-between(sm, md) {
+         
+    }
+    @include respond-between(xs, sm) {
+         
+    }
+    @include respond-below(md) {
+        padding: 64px 0 70px;
+
+    }
+
+}
+.speace-t-70 {
+    padding-top: 70px;
+
+    @include respond-between(md, lg) {
+        padding-top: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 30px;
+    }
+    @include respond-below(xs) {
+        padding-top: 26px;
+    }
+}
+.speace-b-70 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 50px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 30px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 26px;
+    }
+}
+.speace-t-60 {
+    padding-top: 60px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-b-60 {
+    padding-bottom: 60px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+.speace-t-50 {
+    padding-top: 50px;
+
+    @include respond-between(md, lg) {
+        padding-top: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+.speace-b-50 {
+    padding-bottom: 50px;
+
+    @include respond-between(md, lg) {
+        padding-bottom: 40px;
+    }
+    @include respond-between(sm, md) {
+        padding-bottom: 30px;
+    }
+    @include respond-between(xs, sm) {
+        padding-bottom: 20px;
+    }
+    @include respond-below(xs) {
+        padding-bottom: 16px;
+    }
+}
+
+.speace-t-40 {
+    padding-top: 40px;
+
+    @include respond-between(md, lg) {
+        padding-top: 30px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 25px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 20px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+.speace-t-30 {
+    padding-top: 30px;
+
+    @include respond-between(md, lg) {
+        padding-top: 25px;
+    }
+    @include respond-between(sm, md) {
+        padding-top: 20px;
+    }
+    @include respond-between(xs, sm) {
+        padding-top: 18px;
+    }
+    @include respond-below(xs) {
+        padding-top: 16px;
+    }
+}
+
+//bg-size
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+
+//html&body
+html, body{
+    height: 100%;
+    width: 100%;
+}
+//button
+button.btn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    &:focus{
+        box-shadow: none;
+    }
+}
+.btn-style{
+    font-size: 16px;
+    font-weight: 500;
+    color: $white-color;
+    background-color: $button-bg;
+    border-radius: 3px;
+    @extend .transition;
+
+    &:hover{
+        background-color: $button-hover-bg;
+        color: $white-color;
+    }
+}
+//transition link
+.transition{
+    transition: all .3s ease;
+}
+//body css style
+body{
+    @include font($main-font, 15, 400);
+    @include text($para-color, capitalize, 26px);
+}
+
+//heading family style
+@for $i from 1 to 7 {
+    h#{$i}{
+        font-family: $second-font;
+    }
+}
+
+$size:(h1, 90, 700, 100),(h2, 36, 700, 43),(h3, 24, 700, 29),(h4, 22, 700, 26),(h5, 18, 500, 28),(h6, 15, 400, 26),(p, 15, 400, 26);
+@each $name, $font-size, $font-weight, $line-height in $size {
+    #{$name}{
+        @include typrography($font-size, $font-weight, $line-height)
+    }
+}
+
